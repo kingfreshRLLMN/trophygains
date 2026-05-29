@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, ShoppingBag, X } from "lucide-react";
 import { useState } from "react";
 import { useCart } from "@/components/CartProvider";
@@ -23,10 +24,15 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl">
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         <Link className="flex items-center gap-3" href="/">
-          <span className="flex h-10 w-10 items-center justify-center rounded-md border border-gold/60 bg-gold text-sm font-black text-black">
-            TG
-          </span>
-          <span className="text-lg font-black tracking-wide">TrophyGains</span>
+          <Image
+            alt="TrophyGains logo"
+            className="h-12 w-12 rounded-full border border-gold-soft/70 object-cover"
+            height={64}
+            priority
+            src="/trophygains-logo.png"
+            width={64}
+          />
+          <span className="text-lg font-black tracking-wide">Trophy Gains</span>
         </Link>
 
         <div className="hidden items-center gap-7 lg:flex">
