@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100" role="img" aria-label="Athlete silhouette">
+  <rect width="900" height="1100" fill="#060606"/>
+  <path d="M0 0h900v1100H0z" fill="url(#g)"/>
+  <circle cx="450" cy="210" r="84" fill="#202020"/>
+  <path d="M339 328c39-48 181-48 222 0l64 233-85 21-30-97-18 420H408l-18-420-30 97-85-21z" fill="#1d1d1f"/>
+  <path d="M309 735h282" stroke="#b79a57" stroke-width="12" stroke-linecap="round"/>
+  <path d="M276 709v52M624 709v52" stroke="#d7bf7a" stroke-width="34" stroke-linecap="round"/>
+  <path d="M166 878h568" stroke="#fff" stroke-opacity=".12" stroke-width="2"/>
+  <path d="M242 914h416" stroke="#b79a57" stroke-opacity=".3" stroke-width="2"/>
+  <defs>
+    <linearGradient id="g" x1="92" x2="810" y1="0" y2="1100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b79a57" stop-opacity=".22"/>
+      <stop offset=".42" stop-color="#111" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Premium gym scene">
+  <rect width="1600" height="1000" fill="#050505"/>
+  <path d="M0 720C220 620 343 690 520 560c166-122 265-314 508-296 230 17 367 203 572 75v661H0Z" fill="#111"/>
+  <path d="M982 206h84v520h-84z" fill="#171717"/>
+  <path d="M745 292h72v434h-72z" fill="#171717"/>
+  <path d="M420 389h52v337h-52z" fill="#171717"/>
+  <circle cx="1040" cy="245" r="122" fill="#b79a57" opacity=".16"/>
+  <path d="M895 756c30-164 97-277 199-340 28-17 59 6 54 38l-23 153 94 149Z" fill="#202020"/>
+  <path d="M1061 414c34 16 56 51 54 88l-10 184h-87l-17-169-76 88-54-46 95-119c22-28 61-39 95-26Z" fill="#2a2a2a"/>
+  <circle cx="1051" cy="347" r="48" fill="#262626"/>
+  <path d="M270 755h1030" stroke="#b79a57" stroke-width="2" opacity=".55"/>
+  <path d="M1200 500h220M1235 455v90M1385 455v90" stroke="#d7bf7a" stroke-width="18" stroke-linecap="round" opacity=".48"/>
+  <path d="M184 184h420" stroke="#fff" stroke-opacity=".07" stroke-width="2"/>
+  <path d="M189 230h290" stroke="#fff" stroke-opacity=".07" stroke-width="2"/>
+</svg>

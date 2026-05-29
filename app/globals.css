@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #030303;
+  --foreground: #ffffff;
+  --gold: #b79a57;
+  --gold-soft: #d7bf7a;
+  --charcoal: #0b0b0d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-playfair);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--gold);
+  color: #050505;
+}
+
+.section-padding {
+  padding-block: clamp(4.5rem, 8vw, 8rem);
+}
+
+.section-title {
+  max-width: 760px;
+  font-size: clamp(2.25rem, 5vw, 5rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 0.95;
+}
+
+.display-font {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.eyebrow {
+  color: var(--gold-soft);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.premium-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+    #080808;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.gold-border {
+  border-color: rgba(183, 154, 87, 0.45);
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-gold {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  border-radius: 6px;
+  padding-inline: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #050505;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: #050505;
+}
+
+.btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-gold:hover {
+  transform: translateY(-2px);
+}
+
+.btn-secondary:hover {
+  border-color: rgba(215, 191, 122, 0.65);
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gold-soft);
+  font-size: 0.875rem;
+  font-weight: 800;
+}
+
+.field {
+  min-height: 3.25rem;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.875rem 1rem;
+  color: #ffffff;
+  outline: none;
+}
+
+.field:focus {
+  border-color: rgba(215, 191, 122, 0.8);
+}
+
+.field::placeholder {
+  color: rgb(161 161 170);
 }
