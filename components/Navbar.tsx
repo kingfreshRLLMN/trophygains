@@ -26,7 +26,7 @@ export function Navbar() {
         <Link className="flex items-center gap-3" href="/">
           <Image
             alt="TrophyGains logo"
-            className="h-12 w-12 rounded-full border border-gold-soft/70 object-cover"
+            className="h-14 w-14 rounded-full border border-gold-soft/80 bg-white object-contain p-1"
             height={64}
             priority
             src="/trophygains-logo.png"

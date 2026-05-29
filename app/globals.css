@@ -20,7 +20,12 @@
 }
 
 body {
-  background: var(--background);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+    linear-gradient(135deg, #030303 0%, #0c0c0d 48%, #030303 100%);
+  background-attachment: fixed;
+  background-size: 96px 96px, 96px 96px, auto;
   color: var(--foreground);
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
 }
@@ -58,9 +63,10 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
-    #080808;
+    linear-gradient(135deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.018)),
+    rgba(8, 8, 8, 0.92);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(18px);
 }
 
 .gold-surface {
