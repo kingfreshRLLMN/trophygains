@@ -10,7 +10,7 @@ export function ProductCard({ product }: { product: Product }) {
   const { addItem } = useCart();
 
   return (
-    <motion.article className="premium-card flex h-full flex-col p-5" whileHover={{ y: -6 }} transition={{ duration: 0.18 }}>
+    <motion.article className="premium-card shine-card flex h-full flex-col p-5" whileHover={{ y: -8, scale: 1.01 }} transition={{ duration: 0.18 }}>
       <div className="mb-5 flex items-center justify-between gap-3">
         <span className="rounded-md border border-gold/40 bg-gold/10 px-3 py-1 text-xs font-black uppercase tracking-wide text-gold-soft">
           {product.badge}
@@ -25,9 +25,9 @@ export function ProductCard({ product }: { product: Product }) {
         {product.calories ? <span className="rounded-md bg-white/10 px-3 py-2">{product.calories} kcal</span> : null}
         <span className="rounded-md bg-white/10 px-3 py-2">PDF download</span>
       </div>
-      <button className="btn-gold mt-6 w-full" onClick={() => addItem(product)}>
+      <motion.button className="btn-gold mt-6 w-full" onClick={() => addItem(product)} whileTap={{ scale: 0.96 }}>
         Koop product <ShoppingBag className="h-4 w-4" />
-      </button>
+      </motion.button>
     </motion.article>
   );
 }

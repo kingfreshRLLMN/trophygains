@@ -56,10 +56,10 @@ export function HeroSection() {
             ))}
           </div>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Link className="btn-gold" href="/workout-plans">
+            <Link className="btn-gold pressable" href="/workout-plans">
               Shop fitness plans <ShoppingBag className="h-4 w-4" />
             </Link>
-            <Link className="btn-secondary" href="/custom-coaching">
+            <Link className="btn-secondary pressable" href="/custom-coaching">
               Custom coaching <PlayCircle className="h-4 w-4" />
             </Link>
           </div>
@@ -109,7 +109,7 @@ export function HeroSection() {
             <div className="mt-6 grid gap-3">
               {quickLinks.map((item) => (
                 <Link
-                  className="group rounded-md border border-white/10 bg-black/45 p-4 transition hover:border-gold-soft/70 hover:bg-gold/10"
+                  className="pressable group rounded-md border border-white/10 bg-black/45 p-4 transition hover:border-gold-soft/70 hover:bg-gold/10"
                   href={item.href}
                   key={item.href}
                 >

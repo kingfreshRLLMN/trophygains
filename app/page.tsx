@@ -1,4 +1,16 @@
-import { ArrowRight, BadgeCheck, Dumbbell, Flame, Sparkles, Trophy, Utensils } from "lucide-react";
+import {
+  ArrowRight,
+  BadgeCheck,
+  BarChart3,
+  CalendarDays,
+  Download,
+  Dumbbell,
+  Flame,
+  Sparkles,
+  Target,
+  Trophy,
+  Utensils,
+} from "lucide-react";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
 import { MotionSection } from "@/components/MotionSection";
@@ -50,6 +62,30 @@ const categories = [
   },
 ];
 
+const steps = [
+  {
+    icon: Target,
+    title: "Kies je doel",
+    text: "Ga voor cut, maintain, bulk, kracht of physique. De homepage leidt je direct naar de juiste route.",
+  },
+  {
+    icon: CalendarDays,
+    title: "Match je week",
+    text: "Filter op trainingsdagen of calorieen en kies een plan dat realistisch past bij jouw leven.",
+  },
+  {
+    icon: Download,
+    title: "Start direct",
+    text: "Digitale downloads en e-maildelivery zijn voorbereid voor een snelle checkout-flow.",
+  },
+];
+
+const commandStats = [
+  ["Workout split", "4-Day Hypertrophy", "border-gold/40"],
+  ["Nutrition target", "2500 kcal Maintain", "border-white/10"],
+  ["Delivery", "PDF + email ready", "border-white/10"],
+];
+
 export default function Home() {
   const featuredProducts = getFeaturedProducts();
 
@@ -57,7 +93,7 @@ export default function Home() {
     <>
       <HeroSection />
 
-      <MotionSection className="section-padding border-y border-white/10 bg-zinc-950">
+      <MotionSection className="section-padding border-y border-white/10 bg-zinc-950/80">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
@@ -69,8 +105,13 @@ export default function Home() {
             </a>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
-            {categories.map((category) => (
-              <a className="premium-card group p-6 transition hover:-translate-y-1 hover:border-gold-soft/60" href={category.href} key={category.title}>
+            {categories.map((category, index) => (
+              <a
+                className="premium-card shine-card pressable group p-6 transition hover:-translate-y-1 hover:border-gold-soft/60"
+                href={category.href}
+                key={category.title}
+                style={{ transitionDelay: `${index * 60}ms` }}
+              >
                 <category.icon className="mb-7 h-8 w-8 text-gold-soft" />
                 <h2 className="text-2xl font-black">{category.title}</h2>
                 <p className="mt-4 min-h-20 text-sm leading-7 text-zinc-400">{category.text}</p>
@@ -84,9 +125,77 @@ export default function Home() {
       </MotionSection>
 
       <MotionSection className="section-padding">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+          <div>
+            <p className="eyebrow">Trophy system</p>
+            <h2 className="section-title mt-4">Van keuze naar actie in drie stappen.</h2>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-300">
+              De site voelt meer als een premium fitness dashboard: snel kiezen, makkelijk vergelijken en meteen starten.
+            </p>
+          </div>
+          <div className="grid gap-4">
+            {steps.map((step, index) => (
+              <div className="premium-card shine-card grid gap-5 p-5 sm:grid-cols-[auto_1fr]" key={step.title}>
+                <div className="gold-surface flex h-14 w-14 items-center justify-center rounded-md text-black">
+                  <step.icon className="h-6 w-6" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-sm font-black text-gold-soft">0{index + 1}</span>
+                    <h3 className="text-xl font-black">{step.title}</h3>
+                  </div>
+                  <p className="mt-2 text-sm leading-7 text-zinc-400">{step.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </MotionSection>
+
+      <MotionSection className="section-padding border-y border-white/10 bg-black/70">
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div className="premium-card gold-border shine-card p-6 md:p-8">
+            <div className="flex items-center justify-between gap-5 border-b border-white/10 pb-6">
+              <div>
+                <p className="eyebrow">Command center</p>
+                <h2 className="mt-3 text-3xl font-black md:text-5xl">Jouw plan in beeld.</h2>
+              </div>
+              <BarChart3 className="h-10 w-10 text-gold-soft" />
+            </div>
+            <div className="mt-6 grid gap-4">
+              {commandStats.map(([label, value, border]) => (
+                <div className={`rounded-md border ${border} bg-white/[0.035] p-4`} key={label}>
+                  <div className="text-xs font-black uppercase tracking-[0.18em] text-zinc-500">{label}</div>
+                  <div className="mt-2 text-xl font-black text-white">{value}</div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 h-3 overflow-hidden rounded-full bg-white/10">
+              <div className="h-full w-[72%] rounded-full bg-[linear-gradient(90deg,#fff1a8,#c8a64b,#8f6d24)]" />
+            </div>
+            <div className="mt-3 flex justify-between text-xs font-bold uppercase tracking-wide text-zinc-500">
+              <span>Intake</span>
+              <span>Plan</span>
+              <span>Progressie</span>
+            </div>
+          </div>
+          <div>
+            <p className="eyebrow">Waarom dit beter werkt</p>
+            <h2 className="section-title mt-4">Rustige luxe, duidelijke keuzes.</h2>
+            <p className="mt-6 text-lg leading-8 text-zinc-300">
+              Geen drukke webshop. TrophyGains stuurt bezoekers naar het juiste product: training, voeding, ebook of persoonlijke coaching.
+            </p>
+            <a className="btn-gold mt-8" href="/workout-plans">
+              Bekijk workout plans <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </MotionSection>
+
+      <MotionSection className="section-padding">
         <div className="mx-auto grid max-w-7xl gap-5 px-6 md:grid-cols-3">
           {benefits.map((benefit) => (
-            <div className="premium-card p-6" key={benefit.title}>
+            <div className="premium-card shine-card p-6" key={benefit.title}>
               <benefit.icon className="mb-5 h-7 w-7 text-gold" />
               <h2 className="text-xl font-semibold">{benefit.title}</h2>
               <p className="mt-3 text-sm leading-7 text-zinc-400">{benefit.text}</p>

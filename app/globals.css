@@ -69,6 +69,43 @@ body {
   backdrop-filter: blur(18px);
 }
 
+.shine-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-card::before {
+  background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.14) 45%, transparent 70%);
+  content: "";
+  height: 160%;
+  left: -80%;
+  opacity: 0;
+  position: absolute;
+  top: -30%;
+  transform: rotate(12deg);
+  transition:
+    left 700ms ease,
+    opacity 250ms ease;
+  width: 45%;
+}
+
+.shine-card:hover::before {
+  left: 120%;
+  opacity: 1;
+}
+
+.pressable {
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.pressable:active {
+  transform: translateY(1px) scale(0.98);
+}
+
 .gold-surface {
   background:
     linear-gradient(135deg, rgba(255, 245, 184, 0.95) 0%, rgba(203, 164, 68, 0.98) 42%, rgba(129, 94, 26, 0.98) 100%);
@@ -126,6 +163,12 @@ body {
 .btn-secondary:hover,
 .btn-gold:hover {
   transform: translateY(-2px);
+}
+
+.btn-primary:active,
+.btn-secondary:active,
+.btn-gold:active {
+  transform: translateY(1px) scale(0.98);
 }
 
 .btn-secondary:hover {

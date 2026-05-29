@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import { CartProvider } from "@/components/CartProvider";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
+import { ScrollProgress } from "@/components/ScrollProgress";
 import "./globals.css";
 
 const inter = Inter({
@@ -53,6 +54,7 @@ export default function RootLayout({
     >
       <body className="min-h-full bg-black text-white">
         <CartProvider>
+          <ScrollProgress />
           <Navbar />
           <main>{children}</main>
           <Footer />

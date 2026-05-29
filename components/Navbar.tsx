@@ -37,14 +37,14 @@ export function Navbar() {
 
         <div className="hidden items-center gap-7 lg:flex">
           {links.map((link) => (
-            <Link className="text-sm font-semibold text-zinc-300 transition hover:text-gold-soft" href={link.href} key={link.href}>
+            <Link className="pressable text-sm font-semibold text-zinc-300 transition hover:text-gold-soft" href={link.href} key={link.href}>
               {link.label}
             </Link>
           ))}
         </div>
 
         <div className="flex items-center gap-3">
-          <Link className="relative rounded-md border border-white/15 p-3 transition hover:border-gold/60" href="/checkout" aria-label="Cart">
+          <Link className="pressable relative rounded-md border border-white/15 p-3 transition hover:border-gold/60" href="/checkout" aria-label="Cart">
             <ShoppingBag className="h-5 w-5" />
             {count > 0 ? (
               <span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-gold px-1 text-xs font-black text-black">
@@ -52,7 +52,7 @@ export function Navbar() {
               </span>
             ) : null}
           </Link>
-          <button className="rounded-md border border-white/15 p-3 lg:hidden" onClick={() => setOpen((value) => !value)} aria-label="Menu">
+          <button className="pressable rounded-md border border-white/15 p-3 lg:hidden" onClick={() => setOpen((value) => !value)} aria-label="Menu">
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>

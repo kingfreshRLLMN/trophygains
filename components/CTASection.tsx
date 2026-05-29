@@ -13,10 +13,10 @@ export function CTASection() {
             Kies een digitaal product of start met custom coaching als je volledige begeleiding wilt.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link className="btn-gold" href="/nutrition-plans">
+            <Link className="btn-gold pressable" href="/nutrition-plans">
               Nutrition plans <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link className="btn-secondary" href="/contact">
+            <Link className="btn-secondary pressable" href="/contact">
               Contact
             </Link>
           </div>
