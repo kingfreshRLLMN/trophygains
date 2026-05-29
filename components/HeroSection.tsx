@@ -30,11 +30,11 @@ export function HeroSection() {
           <div className="mb-7 flex items-center gap-4">
             <Image
               alt="TrophyGains logo"
-              className="h-24 w-24 rounded-full border border-gold-soft/80 bg-white object-contain p-1 shadow-2xl shadow-gold/20"
-              height={120}
+              className="h-32 w-32 rounded-full border border-gold-soft/80 bg-white object-contain shadow-2xl shadow-gold/20"
+              height={160}
               priority
-              src="/trophygains-logo.png"
-              width={120}
+              src="/trophygains-logo-cropped.png"
+              width={160}
             />
             <div>
               <p className="eyebrow">Trophy Gains</p>
@@ -83,10 +83,10 @@ export function HeroSection() {
               <div className="gold-surface rounded-md p-4">
                 <Image
                   alt="TrophyGains logo"
-                  className="aspect-square w-full rounded-full bg-white object-contain p-2"
+                  className="aspect-square w-full rounded-full bg-white object-contain"
                   height={360}
                   priority
-                  src="/trophygains-logo.png"
+                  src="/trophygains-logo-cropped.png"
                   width={360}
                 />
               </div>
