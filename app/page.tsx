@@ -3,13 +3,13 @@ import {
   BadgeCheck,
   Dumbbell,
   Flame,
-  Sparkles,
   Trophy,
   Utensils,
 } from "lucide-react";
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
 import { MotionSection } from "@/components/MotionSection";
+import { ReviewsSection } from "@/components/ReviewsSection";
 
 const benefits = [
   {
@@ -27,12 +27,6 @@ const benefits = [
     title: "Direct digitaal",
     text: "Na checkout voorbereid voor automatische levering met downloadlinks en e-mailflows.",
   },
-];
-
-const reviews = [
-  "Sterke opbouw, premium uitstraling en vooral duidelijk. Geen ruis.",
-  "Mijn cut is eindelijk gestructureerd. Training en voeding sluiten goed aan.",
-  "De coaching-intake voelt persoonlijk en professioneel.",
 ];
 
 const categories = [
@@ -104,27 +98,7 @@ export default function Home() {
         </div>
       </MotionSection>
 
-      <MotionSection className="section-padding bg-white text-black">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-10 flex items-center gap-3">
-            <Sparkles className="h-6 w-6 text-[#a48645]" />
-            <div>
-              <p className="eyebrow text-zinc-600">Reviews</p>
-              <h2 className="section-title text-black">Social proof placeholder</h2>
-            </div>
-          </div>
-          <div className="grid gap-5 md:grid-cols-3">
-            {reviews.map((review, index) => (
-              <figure className="rounded-lg border border-black/10 bg-zinc-50 p-6" key={review}>
-                <blockquote className="text-lg leading-8">{review}</blockquote>
-                <figcaption className="mt-6 text-sm font-semibold text-zinc-600">
-                  TrophyGains member #{index + 1}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </MotionSection>
+      <ReviewsSection />
 
       <CTASection />
     </>
