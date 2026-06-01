@@ -63,7 +63,7 @@ export function HeroSection() {
         <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black to-transparent" />
       </div>
 
-      <div className="relative mx-auto grid min-h-[calc(100svh-5rem)] max-w-7xl items-center gap-8 px-6 py-8 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="relative mx-auto grid min-h-[calc(100svh-5rem)] max-w-7xl items-center gap-8 px-6 pb-20 pt-8 lg:grid-cols-[1.05fr_0.95fr]">
         <motion.div initial="hidden" animate="visible" transition={{ staggerChildren: 0.08 }}>
           <motion.div
             className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-gold-soft"
@@ -184,6 +184,7 @@ export function HeroSection() {
           </div>
         </motion.div>
       </div>
+
     </section>
   );
 }
