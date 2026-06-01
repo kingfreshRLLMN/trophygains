@@ -74,9 +74,6 @@ export function ReviewsSection() {
         </div>
 
         <div className="relative">
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-black to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-black to-transparent" />
-
           <motion.div
             className="flex w-max gap-5"
             animate={{ x: ["0%", "-50%"] }}
