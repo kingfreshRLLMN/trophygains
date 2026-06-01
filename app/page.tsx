@@ -10,8 +10,6 @@ import {
 import { CTASection } from "@/components/CTASection";
 import { HeroSection } from "@/components/HeroSection";
 import { MotionSection } from "@/components/MotionSection";
-import { ProductCard } from "@/components/ProductCard";
-import { getFeaturedProducts } from "@/lib/products";
 
 const benefits = [
   {
@@ -59,8 +57,6 @@ const categories = [
 ];
 
 export default function Home() {
-  const featuredProducts = getFeaturedProducts();
-
   return (
     <>
       <HeroSection />
@@ -105,25 +101,6 @@ export default function Home() {
               <p className="mt-3 text-sm leading-7 text-zinc-400">{benefit.text}</p>
             </div>
           ))}
-        </div>
-      </MotionSection>
-
-      <MotionSection className="section-padding bg-zinc-950">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
-            <div>
-              <p className="eyebrow">Featured Products</p>
-              <h2 className="section-title">Populaire digitale producten.</h2>
-            </div>
-            <a className="text-link" href="/workout-plans">
-              Bekijk alle producten <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
-          <div className="grid gap-5 md:grid-cols-3">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
         </div>
       </MotionSection>
 
