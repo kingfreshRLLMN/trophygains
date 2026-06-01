@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { CartProvider } from "@/components/CartProvider";
 import { Footer } from "@/components/Footer";
-import { HomeBottomTicker } from "@/components/HomeBottomTicker";
 import { Navbar } from "@/components/Navbar";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import "./globals.css";
@@ -58,7 +57,6 @@ export default function RootLayout({
           <ScrollProgress />
           <Navbar />
           <main>{children}</main>
-          <HomeBottomTicker />
           <Footer />
         </CartProvider>
       </body>
