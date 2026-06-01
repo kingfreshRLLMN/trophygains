@@ -22,11 +22,11 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl">
-      <nav className="mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6">
+      <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link className="flex items-center gap-3" href="/">
           <Image
             alt="TrophyGains logo"
-            className="h-16 w-16 rounded-full border border-gold-soft/80 bg-white object-contain shadow-xl shadow-gold/10"
+            className="h-14 w-14 rounded-full border border-gold-soft/80 bg-white object-contain shadow-xl shadow-gold/10"
             height={96}
             priority
             src="/trophygains-logo-cropped.png"

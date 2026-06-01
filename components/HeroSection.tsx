@@ -1,102 +1,134 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, PlayCircle, ShoppingBag, Star } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Dumbbell,
+  PlayCircle,
+  ShoppingBag,
+  Utensils,
+  Zap,
+} from "lucide-react";
 
 const stats = [
-  ["20+", "digitale producten"],
-  ["2-6", "trainingsdagen"],
-  ["1500-3500", "kcal opties"],
+  ["20+", "producten"],
+  ["2-6", "dagen"],
+  ["1500-3500", "kcal"],
 ];
 
-const quickLinks = [
-  { href: "/workout-plans", label: "Workout Plans", text: "Kracht, hypertrophy en physique schema's." },
-  { href: "/nutrition-plans", label: "Nutrition Plans", text: "Cut, maintain en bulk per caloriebehoefte." },
-  { href: "/custom-coaching", label: "Custom Coaching", text: "Persoonlijke intake en begeleiding." },
+const routes = [
+  {
+    icon: Dumbbell,
+    href: "/workout-plans",
+    label: "Workout Plans",
+    text: "Schema's voor kracht, spiermassa en physique.",
+  },
+  {
+    icon: Utensils,
+    href: "/nutrition-plans",
+    label: "Nutrition Plans",
+    text: "Cut, maintain en bulk met heldere calorie-opties.",
+  },
+  {
+    icon: Zap,
+    href: "/custom-coaching",
+    label: "Custom Coaching",
+    text: "Persoonlijke intake voor maatwerk begeleiding.",
+  },
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 26, filter: "blur(8px)" },
+  hidden: { opacity: 0, y: 22, filter: "blur(8px)" },
   visible: { opacity: 1, y: 0, filter: "blur(0px)" },
 };
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-black">
+    <section className="relative min-h-[calc(100svh-5rem)] overflow-hidden bg-black">
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(0,0,0,0.98)_0%,rgba(18,18,19,0.92)_42%,rgba(0,0,0,0.98)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.028)_1px,transparent_1px)] bg-[size:96px_96px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(0,0,0,0.98)_0%,rgba(13,13,14,0.94)_48%,rgba(0,0,0,0.98)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.032)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.026)_1px,transparent_1px)] bg-[size:92px_92px]" />
         <motion.div
-          className="absolute left-[8%] top-[18%] h-72 w-72 rounded-full bg-gold/10 blur-3xl"
-          animate={{ opacity: [0.22, 0.42, 0.22], scale: [1, 1.12, 1] }}
+          className="absolute left-[18%] top-[18%] h-72 w-72 rounded-full bg-gold/10 blur-3xl"
+          animate={{ opacity: [0.18, 0.34, 0.18], scale: [1, 1.1, 1] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute right-[12%] top-[20%] h-96 w-96 rounded-full bg-gold-soft/10 blur-3xl"
-          animate={{ opacity: [0.18, 0.34, 0.18], scale: [1.05, 0.94, 1.05] }}
+          className="absolute right-[16%] top-[28%] h-80 w-80 rounded-full bg-gold-soft/10 blur-3xl"
+          animate={{ opacity: [0.16, 0.3, 0.16], scale: [1.08, 0.96, 1.08] }}
           transition={{ duration: 8.5, repeat: Infinity, ease: "easeInOut" }}
         />
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black to-transparent" />
       </div>
-      <div className="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-10 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          transition={{ staggerChildren: 0.09 }}
-        >
-          <motion.div className="mb-7 flex items-center gap-4" variants={fadeUp} transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}>
-            <motion.div
-              animate={{ y: [0, -7, 0], rotate: [0, -1.5, 0] }}
-              transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <Image
-                alt="TrophyGains logo"
-                className="h-32 w-32 rounded-full border border-gold-soft/80 bg-white object-contain shadow-2xl shadow-gold/20"
-                height={160}
-                priority
-                src="/trophygains-logo-cropped.png"
-                width={160}
-              />
-            </motion.div>
-            <div>
-              <p className="eyebrow">Trophy Gains</p>
-              <p className="mt-2 text-sm font-semibold text-zinc-400">Gains to win trophies</p>
-            </div>
-          </motion.div>
-          <motion.h1
-            className="mt-5 max-w-4xl text-6xl font-black leading-[0.88] tracking-normal text-white md:text-8xl"
+
+      <div className="relative mx-auto grid min-h-[calc(100svh-5rem)] max-w-7xl items-center gap-8 px-6 py-8 lg:grid-cols-[1.05fr_0.95fr]">
+        <motion.div initial="hidden" animate="visible" transition={{ staggerChildren: 0.08 }}>
+          <motion.div
+            className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-gold-soft"
             variants={fadeUp}
-            transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
           >
-            Premium fitness plans voor serieuze gains.
+            Premium digital fitness
+          </motion.div>
+
+          <motion.h1
+            className="mt-5 max-w-4xl text-4xl font-black leading-[0.9] tracking-normal text-white min-[390px]:text-5xl sm:text-6xl lg:text-7xl"
+            variants={fadeUp}
+            transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
+          >
+            Train hard. Eat smart. Win trophies.
           </motion.h1>
-          <motion.p className="mt-7 max-w-2xl text-lg leading-8 text-zinc-300" variants={fadeUp} transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}>
-            Koop direct digitale trainingsschema&apos;s, voedingsschema&apos;s en ebooks. Wil je maatwerk? Start dan met custom coaching en krijg een plan dat past bij jouw doel.
+
+          <motion.p
+            className="mt-5 max-w-2xl text-base leading-7 text-zinc-300 sm:text-lg sm:leading-8"
+            variants={fadeUp}
+            transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
+          >
+            Digitale workout plans, nutrition plans, ebooks en coaching voor sporters die structuur willen zonder ruis.
           </motion.p>
-          <motion.div className="mt-8 grid gap-3 sm:grid-cols-3" variants={fadeUp} transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}>
+
+          <motion.div
+            className="mt-6 grid max-w-2xl grid-cols-3 gap-2 sm:gap-3"
+            variants={fadeUp}
+            transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
+          >
             {stats.map(([value, label]) => (
-              <motion.div className="rounded-md border border-white/10 bg-white/[0.04] p-4" key={label} whileHover={{ y: -4, borderColor: "rgba(239,211,130,0.55)" }}>
-                <div className="text-2xl font-black text-gold-soft">{value}</div>
-                <div className="mt-1 text-xs font-bold uppercase tracking-wide text-zinc-400">{label}</div>
+              <motion.div
+                className="rounded-md border border-white/10 bg-white/[0.04] p-3 sm:p-4"
+                key={label}
+                whileHover={{ y: -3, borderColor: "rgba(239,211,130,0.55)" }}
+              >
+                <div className="text-xl font-black text-gold-soft sm:text-2xl">{value}</div>
+                <div className="mt-1 text-[0.65rem] font-bold uppercase tracking-wide text-zinc-500 sm:text-xs">{label}</div>
               </motion.div>
             ))}
           </motion.div>
-          <motion.div className="mt-9 flex flex-col gap-3 sm:flex-row" variants={fadeUp} transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}>
+
+          <motion.div
+            className="mt-7 flex flex-col gap-3 sm:flex-row"
+            variants={fadeUp}
+            transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
+          >
             <motion.div whileHover={{ y: -3, scale: 1.02 }} whileTap={{ scale: 0.97 }}>
               <Link className="btn-gold pressable w-full sm:w-auto" href="/workout-plans">
-              Shop fitness plans <ShoppingBag className="h-4 w-4" />
+                Shop plans <ShoppingBag className="h-4 w-4" />
               </Link>
             </motion.div>
             <motion.div whileHover={{ y: -3, scale: 1.02 }} whileTap={{ scale: 0.97 }}>
               <Link className="btn-secondary pressable w-full sm:w-auto" href="/custom-coaching">
-              Custom coaching <PlayCircle className="h-4 w-4" />
+                Coaching <PlayCircle className="h-4 w-4" />
               </Link>
             </motion.div>
           </motion.div>
-          <motion.div className="mt-6 flex flex-wrap gap-4 text-sm font-semibold text-zinc-400" variants={fadeUp} transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}>
-            {["Direct downloadbaar", "Mollie checkout voorbereid", "Mobiel & desktop"].map((item) => (
+
+          <motion.div
+            className="mt-5 hidden flex-wrap gap-4 text-sm font-semibold text-zinc-400 sm:flex"
+            variants={fadeUp}
+            transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {["Direct downloadbaar", "Mollie-ready", "Mobiel & desktop"].map((item) => (
               <span className="inline-flex items-center gap-2" key={item}>
                 <CheckCircle2 className="h-4 w-4 text-gold-soft" />
                 {item}
@@ -104,69 +136,52 @@ export function HeroSection() {
             ))}
           </motion.div>
         </motion.div>
+
         <motion.div
-          className="premium-card gold-border shine-card p-5 md:p-6"
-          initial={{ opacity: 0, x: 38, scale: 0.96, filter: "blur(10px)" }}
+          className="premium-card gold-border shine-card p-4 md:p-5"
+          initial={{ opacity: 0, x: 34, scale: 0.97, filter: "blur(10px)" }}
           animate={{ opacity: 1, x: 0, scale: 1, filter: "blur(0px)" }}
-          transition={{ delay: 0.22, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          whileHover={{ y: -8, rotateX: 1.5, rotateY: -1.5 }}
+          transition={{ delay: 0.18, duration: 0.78, ease: [0.22, 1, 0.36, 1] }}
+          whileHover={{ y: -6 }}
         >
-          <motion.div
-            className="rounded-md border border-gold/30 bg-[linear-gradient(145deg,rgba(239,211,130,0.16),rgba(255,255,255,0.035)_38%,rgba(0,0,0,0.32)_100%)] p-6"
-            animate={{ boxShadow: ["0 0 0 rgba(239,211,130,0)", "0 0 45px rgba(239,211,130,0.12)", "0 0 0 rgba(239,211,130,0)"] }}
-            transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <div className="grid gap-6 md:grid-cols-[0.78fr_1fr] md:items-center">
-              <motion.div className="gold-surface rounded-md p-4" animate={{ y: [0, -5, 0] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}>
-                <Image
-                  alt="TrophyGains logo"
-                  className="aspect-square w-full rounded-full bg-white object-contain"
-                  height={360}
-                  priority
-                  src="/trophygains-logo-cropped.png"
-                  width={360}
-                />
-              </motion.div>
+          <div className="rounded-md border border-gold/25 bg-[linear-gradient(145deg,rgba(239,211,130,0.13),rgba(255,255,255,0.035)_42%,rgba(0,0,0,0.34)_100%)] p-5">
+            <div className="flex items-end justify-between gap-5 border-b border-white/10 pb-5">
               <div>
-                <p className="eyebrow">Premium shop</p>
-                <h2 className="mt-2 text-3xl font-black leading-tight">Alles voor je volgende fase.</h2>
-                <p className="mt-4 text-sm leading-7 text-zinc-400">
-                  Kies een route en start direct met een digitaal plan. Geen onduidelijke pakketten, gewoon helder aanbod.
-                </p>
-                <div className="mt-5 grid gap-2 text-sm font-semibold text-zinc-300">
-                  {["Training", "Voeding", "Ebooks", "Coaching"].map((item) => (
-                    <span className="inline-flex items-center gap-2" key={item}>
-                      <Star className="h-4 w-4 fill-gold-soft text-gold-soft" />
-                      {item}
-                    </span>
-                  ))}
-                </div>
+                <p className="eyebrow">Start hier</p>
+                <h2 className="mt-2 text-3xl font-black leading-tight">Kies je route.</h2>
               </div>
+              <span className="rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-xs font-black text-gold-soft">
+                Premium
+              </span>
             </div>
-            <div className="mt-6 grid gap-3">
-              {quickLinks.map((item, index) => (
+
+            <div className="mt-5 grid gap-3">
+              {routes.map((item, index) => (
                 <motion.div
                   key={item.href}
                   initial={{ opacity: 0, x: 18 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.42 + index * 0.08, duration: 0.45 }}
+                  transition={{ delay: 0.34 + index * 0.08, duration: 0.45 }}
                   whileHover={{ x: 5 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <Link
-                  className="pressable group rounded-md border border-white/10 bg-black/45 p-4 transition hover:border-gold-soft/70 hover:bg-gold/10"
-                  href={item.href}
+                    className="pressable group grid grid-cols-[auto_1fr_auto] items-center gap-4 rounded-md border border-white/10 bg-black/45 p-4 transition hover:border-gold-soft/70 hover:bg-gold/10"
+                    href={item.href}
                   >
-                  <div className="flex items-center justify-between gap-4">
-                    <h3 className="text-lg font-black">{item.label}</h3>
+                    <span className="gold-surface flex h-11 w-11 items-center justify-center rounded-md text-black">
+                      <item.icon className="h-5 w-5" />
+                    </span>
+                    <span>
+                      <span className="block text-base font-black">{item.label}</span>
+                      <span className="mt-1 block text-sm leading-6 text-zinc-400">{item.text}</span>
+                    </span>
                     <ArrowRight className="h-4 w-4 text-gold-soft transition group-hover:translate-x-1" />
-                  </div>
-                  <p className="mt-2 text-sm leading-6 text-zinc-400">{item.text}</p>
                   </Link>
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>
