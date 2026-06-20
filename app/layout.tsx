@@ -19,11 +19,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://trophygains.nl"),
   title: {
-    default: "TrophyGains | Premium Fitness Plans & Coaching",
+    default: "TrophyGains | Premium fitnessschema's en coaching",
     template: "%s | TrophyGains",
   },
   description:
-    "Premium digitale trainingsschema's, voedingsschema's, ebooks en custom coaching voor ambitieuze sporters.",
+    "Premium digitale trainingsschema's, voedingsschema's, ebooks en persoonlijke coaching voor ambitieuze sporters.",
   keywords: [
     "fitness schema",
     "trainingsschema",

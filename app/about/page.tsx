@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { MotionSection } from "@/components/MotionSection";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "Over ons",
   description: "Over TrophyGains, missie en visie.",
 };
 
@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        eyebrow="About TrophyGains"
+        eyebrow="Over TrophyGains"
         title="Discipline verdient een systeem dat even strak is als je doel."
         text="TrophyGains is gebouwd voor sporters die premium begeleiding, duidelijke structuur en digitale producten zonder ruis willen."
       />

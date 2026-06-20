@@ -8,11 +8,11 @@ import { useCart } from "@/components/CartProvider";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/workout-plans", label: "Workout Plans" },
-  { href: "/nutrition-plans", label: "Nutrition" },
+  { href: "/workout-plans", label: "Trainingsschema's" },
+  { href: "/nutrition-plans", label: "Voedingsschema's" },
   { href: "/ebooks", label: "Ebooks" },
   { href: "/custom-coaching", label: "Coaching" },
-  { href: "/about", label: "About" },
+  { href: "/about", label: "Over ons" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -44,7 +44,7 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          <Link className="pressable relative rounded-md border border-white/15 p-3 transition hover:border-gold/60" href="/checkout" aria-label="Cart">
+          <Link className="pressable relative rounded-md border border-white/15 p-3 transition hover:border-gold/60" href="/checkout" aria-label="Winkelwagen">
             <ShoppingBag className="h-5 w-5" />
             {count > 0 ? (
               <span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-gold px-1 text-xs font-black text-black">

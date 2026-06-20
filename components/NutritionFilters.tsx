@@ -5,6 +5,11 @@ import { ProductCard } from "@/components/ProductCard";
 import type { Product } from "@/lib/types";
 
 const goals = ["Cut", "Maintain", "Bulk"] as const;
+const goalLabels = {
+  Cut: "Cut",
+  Maintain: "Onderhoud",
+  Bulk: "Bulk",
+};
 const calories = [1500, 2000, 2500, 3000, 3500];
 
 export function NutritionFilters({ products }: { products: Product[] }) {
@@ -29,7 +34,7 @@ export function NutritionFilters({ products }: { products: Product[] }) {
         </button>
         {goals.map((item) => (
           <button className={goal === item ? "btn-gold" : "btn-secondary"} key={item} onClick={() => setGoal(item)}>
-            {item}
+            {goalLabels[item]}
           </button>
         ))}
       </div>

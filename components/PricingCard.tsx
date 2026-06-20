@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Check } from "lucide-react";
 
 export function PricingCard({
   title,
@@ -15,11 +16,14 @@ export function PricingCard({
       <p className="mt-3 text-4xl font-black text-gold-soft">{price}</p>
       <ul className="mt-6 grid gap-3 text-sm text-zinc-300">
         {features.map((feature) => (
-          <li key={feature}>✓ {feature}</li>
+          <li className="flex items-start gap-2" key={feature}>
+            <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold-soft" />
+            {feature}
+          </li>
         ))}
       </ul>
       <Link className="btn-gold mt-7 w-full" href="/custom-coaching">
-        Start intake
+        Start je intake
       </Link>
     </div>
   );

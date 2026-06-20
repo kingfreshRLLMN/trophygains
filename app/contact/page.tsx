@@ -12,7 +12,7 @@ export default function ContactPage() {
       <PageHeader
         eyebrow="Contact"
         title="Vragen over producten, coaching of je bestelling?"
-        text="Stuur een bericht. De formulieractie is voorbereid als placeholder voor een latere backend of e-mailservice."
+        text="Stuur ons een bericht. Het contactformulier wordt later gekoppeld aan onze e-mailservice."
       />
       <section className="section-padding">
         <div className="mx-auto max-w-3xl px-6">
@@ -22,7 +22,7 @@ export default function ContactPage() {
             <input className="field" name="subject" placeholder="Onderwerp" />
             <textarea className="field min-h-40" name="message" placeholder="Bericht" />
             <button className="btn-gold" type="button">
-              Verstuur bericht placeholder
+              Verstuur bericht
             </button>
           </form>
         </div>

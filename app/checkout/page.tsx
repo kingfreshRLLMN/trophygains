@@ -3,17 +3,17 @@ import { CheckoutClient } from "@/components/CheckoutClient";
 import { PageHeader } from "@/components/PageHeader";
 
 export const metadata: Metadata = {
-  title: "Checkout",
-  description: "TrophyGains checkout placeholder met Mollie voorbereiding.",
+  title: "Afrekenen",
+  description: "TrophyGains afrekenpagina met voorbereiding voor Mollie.",
 };
 
 export default function CheckoutPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Checkout"
-        title="Cart, payment en delivery voorbereid."
-        text="Deze placeholder toont waar Mollie-betalingen, ordermetadata en automatische e-maildelivery gekoppeld worden."
+        eyebrow="Afrekenen"
+        title="Je bestelling veilig en snel afronden."
+        text="De betaalomgeving is voorbereid voor Mollie en automatische levering van je digitale producten."
       />
       <section className="section-padding">
         <div className="mx-auto max-w-7xl px-6">

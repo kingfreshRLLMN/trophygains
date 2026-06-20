@@ -20,12 +20,12 @@ const benefits = [
   {
     icon: Dumbbell,
     title: "Gebouwd voor resultaat",
-    text: "Programma's voor spieropbouw, vetverlies en performance met praktische uitvoerbaarheid.",
+    text: "Programma's voor spieropbouw, vetverlies en prestaties die praktisch uitvoerbaar zijn.",
   },
   {
     icon: BadgeCheck,
     title: "Direct digitaal",
-    text: "Na checkout voorbereid voor automatische levering met downloadlinks en e-mailflows.",
+    text: "Na betaling voorbereid voor automatische levering met downloadlinks en e-mails.",
   },
 ];
 
@@ -33,20 +33,20 @@ const categories = [
   {
     icon: Dumbbell,
     href: "/workout-plans",
-    title: "Workout Plans",
+    title: "Trainingsschema's",
     text: "Filter op 2, 3, 4, 5 of 6 trainingsdagen en kies direct jouw schema.",
   },
   {
     icon: Utensils,
     href: "/nutrition-plans",
-    title: "Nutrition Plans",
-    text: "Cut, maintain en bulk schema's met calorie-opties van 1500 tot 3500 kcal.",
+    title: "Voedingsschema's",
+    text: "Schema's voor cut, onderhoud en bulk met calorie-opties van 1500 tot 3500 kcal.",
   },
   {
     icon: Flame,
     href: "/custom-coaching",
-    title: "Custom Coaching",
-    text: "Voor sporters die persoonlijke sturing, check-ins en maatwerk willen.",
+    title: "Persoonlijke coaching",
+    text: "Voor sporters die persoonlijke sturing, voortgangsmomenten en maatwerk willen.",
   },
 ];
 
@@ -59,11 +59,11 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
-              <p className="eyebrow">Shop per doel</p>
+              <p className="eyebrow">Kies op basis van je doel</p>
               <h2 className="section-title">Alles staat klaar om direct te starten.</h2>
             </div>
             <a className="text-link" href="/checkout">
-              Naar checkout <ArrowRight className="h-4 w-4" />
+              Naar winkelwagen <ArrowRight className="h-4 w-4" />
             </a>
           </div>
           <div className="grid gap-5 md:grid-cols-3">

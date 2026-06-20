@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { PricingCard } from "@/components/PricingCard";
 
 export const metadata: Metadata = {
-  title: "Custom Coaching",
+  title: "Persoonlijke coaching",
   description: "Persoonlijke TrophyGains coaching met intakeformulier.",
 };
 
@@ -11,9 +11,9 @@ export default function CustomCoachingPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Custom Coaching"
+        eyebrow="Persoonlijke coaching"
         title="Persoonlijke begeleiding met een premium intake."
-        text="Vul je basisgegevens in. De backend en e-mailflow kunnen later worden gekoppeld aan CRM, Mollie en onboarding."
+        text="Vul je gegevens in voor een persoonlijk plan dat aansluit op jouw doel, ervaring en beschikbare trainingsdagen."
       />
       <section className="section-padding">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-[1fr_0.75fr]">
@@ -31,7 +31,7 @@ export default function CustomCoachingPage() {
               <option>Vetverlies</option>
               <option>Spieropbouw</option>
               <option>Onderhoud</option>
-              <option>Performance</option>
+              <option>Sportprestaties</option>
             </select>
             <select className="field" name="trainingDays" defaultValue="">
               <option value="" disabled>
@@ -45,17 +45,17 @@ export default function CustomCoachingPage() {
             </select>
             <textarea className="field min-h-36" name="notes" placeholder="Opmerkingen, blessures, voorkeuren of context" />
             <button className="btn-gold" type="button">
-              Verstuur intake placeholder
+              Verstuur intake
             </button>
           </form>
           <PricingCard
-            title="Premium Coaching"
+            title="Premium coaching"
             price="Vanaf €149"
             features={[
               "Persoonlijke training en voeding",
-              "Check-ins en progressiefeedback",
-              "Aanpassingen op basis van data",
-              "Mollie betaling later koppelbaar",
+              "Voortgangsmomenten en feedback",
+              "Aanpassingen op basis van gegevens",
+              "Veilige betaling via Mollie voorbereid",
             ]}
           />
         </div>

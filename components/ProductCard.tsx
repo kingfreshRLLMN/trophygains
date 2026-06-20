@@ -8,6 +8,7 @@ import type { Product } from "@/lib/types";
 
 export function ProductCard({ product }: { product: Product }) {
   const { addItem } = useCart();
+  const goalLabel = product.goal === "Maintain" ? "Onderhoud" : product.goal;
 
   return (
     <motion.article className="premium-card shine-card flex h-full flex-col p-5" whileHover={{ y: -8, scale: 1.01 }} transition={{ duration: 0.18 }}>
@@ -21,9 +22,9 @@ export function ProductCard({ product }: { product: Product }) {
       <p className="mt-4 flex-1 text-sm leading-7 text-zinc-400">{product.description}</p>
       <div className="mt-5 flex flex-wrap gap-2 text-xs font-bold text-zinc-300">
         {product.days ? <span className="rounded-md bg-white/10 px-3 py-2">{product.days} dagen</span> : null}
-        {product.goal ? <span className="rounded-md bg-white/10 px-3 py-2">{product.goal}</span> : null}
+        {goalLabel ? <span className="rounded-md bg-white/10 px-3 py-2">{goalLabel}</span> : null}
         {product.calories ? <span className="rounded-md bg-white/10 px-3 py-2">{product.calories} kcal</span> : null}
-        <span className="rounded-md bg-white/10 px-3 py-2">PDF download</span>
+        <span className="rounded-md bg-white/10 px-3 py-2">PDF-download</span>
       </div>
       <motion.button className="btn-gold mt-6 w-full" onClick={() => addItem(product)} whileTap={{ scale: 0.96 }}>
         Koop product <ShoppingBag className="h-4 w-4" />

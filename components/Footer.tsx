@@ -11,18 +11,18 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <h3 className="font-bold text-gold-soft">Shop</h3>
+          <h3 className="font-bold text-gold-soft">Aanbod</h3>
           <div className="mt-4 grid gap-3 text-sm text-zinc-400">
-            <Link href="/workout-plans">Workout Plans</Link>
-            <Link href="/nutrition-plans">Nutrition Plans</Link>
+            <Link href="/workout-plans">Trainingsschema&apos;s</Link>
+            <Link href="/nutrition-plans">Voedingsschema&apos;s</Link>
             <Link href="/ebooks">Ebooks</Link>
           </div>
         </div>
         <div>
-          <h3 className="font-bold text-gold-soft">Company</h3>
+          <h3 className="font-bold text-gold-soft">TrophyGains</h3>
           <div className="mt-4 grid gap-3 text-sm text-zinc-400">
-            <Link href="/custom-coaching">Custom Coaching</Link>
-            <Link href="/about">About</Link>
+            <Link href="/custom-coaching">Persoonlijke coaching</Link>
+            <Link href="/about">Over ons</Link>
             <Link href="/contact">Contact</Link>
           </div>
         </div>

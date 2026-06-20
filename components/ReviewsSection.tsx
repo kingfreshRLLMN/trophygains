@@ -21,7 +21,7 @@ const reviews = [
     name: "Milan R.",
     city: "Amsterdam",
     quote: "Premium uitstraling, maar vooral praktisch. Geen onnodige ruis, gewoon schema's die goed te volgen zijn.",
-    goal: "Hypertrophy",
+    goal: "Hypertrofie",
   },
   {
     name: "Noa B.",
@@ -33,13 +33,13 @@ const reviews = [
     name: "Jesse M.",
     city: "Breda",
     quote: "Voor het eerst had ik overzicht in mijn voeding. De calorie-opties maken het makkelijk om consistent te blijven.",
-    goal: "Nutrition",
+    goal: "Voeding",
   },
   {
     name: "Lina S.",
     city: "Den Haag",
     quote: "Alles voelt strak en professioneel. Ik had meteen het idee dat ik met een serieus systeem begon.",
-    goal: "Lifestyle",
+    goal: "Leefstijl",
   },
 ];
 
@@ -63,7 +63,7 @@ export function ReviewsSection() {
           <div>
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-gold-soft">
               <Sparkles className="h-4 w-4" />
-              Reviews
+              Ervaringen
             </div>
             <h2 className="section-title">Gebouwd voor sporters die serieus willen doorpakken.</h2>
           </div>

@@ -30,7 +30,7 @@ export function CTASection() {
 
           <div className="relative grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
             <div>
-              <p className="eyebrow">Custom coaching</p>
+              <p className="eyebrow">Persoonlijke coaching</p>
               <h2 className="section-title mt-4">Alles wat je nodig hebt in een plan dat bij jou past.</h2>
               <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-300">
                 Start met persoonlijke begeleiding voor training, voeding, progressie en vragen onderweg. Jij hoeft niet te
@@ -39,7 +39,7 @@ export function CTASection() {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link className="btn-gold pressable" href="/custom-coaching">
-                  Start custom plan <ArrowRight className="h-4 w-4" />
+                  Start jouw plan <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link className="btn-secondary pressable" href="/contact">
                   Stel je vraag

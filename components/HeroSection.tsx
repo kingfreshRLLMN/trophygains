@@ -22,29 +22,29 @@ const routes = [
   {
     icon: Dumbbell,
     href: "/workout-plans",
-    label: "Workout Plans",
+    label: "Trainingsschema's",
     text: "Schema's voor kracht, spiermassa en physique.",
   },
   {
     icon: Utensils,
     href: "/nutrition-plans",
-    label: "Nutrition Plans",
-    text: "Cut, maintain en bulk met heldere calorie-opties.",
+    label: "Voedingsschema's",
+    text: "Cut, onderhoud en bulk met heldere calorie-opties.",
   },
   {
     icon: Zap,
     href: "/custom-coaching",
-    label: "Custom Coaching",
-    text: "Persoonlijke intake voor maatwerk begeleiding.",
+    label: "Persoonlijke coaching",
+    text: "Persoonlijke intake voor begeleiding op maat.",
   },
 ];
 
 const tickerItems = [
-  "Premium workout plans",
-  "Cut, maintain & bulk nutrition",
-  "Direct digital downloads",
-  "Custom coaching intake",
-  "Built for serious gains",
+  "Premium trainingsschema's",
+  "Voeding voor cut, onderhoud en bulk",
+  "Direct digitaal downloadbaar",
+  "Persoonlijke coaching",
+  "Gebouwd voor serieuze progressie",
 ];
 
 const fadeUp = {
@@ -78,7 +78,7 @@ export function HeroSection() {
             variants={fadeUp}
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
           >
-            Premium digital fitness
+            Premium digitale fitness
           </motion.div>
 
           <motion.h1
@@ -86,7 +86,7 @@ export function HeroSection() {
             variants={fadeUp}
             transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
           >
-            Train hard. Eat smart. Win trophies.
+            Train hard. Eet slim. Win prijzen.
           </motion.h1>
 
           <motion.p
@@ -94,7 +94,7 @@ export function HeroSection() {
             variants={fadeUp}
             transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
           >
-            Digitale workout plans, nutrition plans, ebooks en coaching voor sporters die structuur willen zonder ruis.
+            Digitale trainingsschema&apos;s, voedingsschema&apos;s, ebooks en coaching voor sporters die structuur willen zonder ruis.
           </motion.p>
 
           <motion.div
@@ -121,7 +121,7 @@ export function HeroSection() {
           >
             <motion.div whileHover={{ y: -3, scale: 1.02 }} whileTap={{ scale: 0.97 }}>
               <Link className="btn-gold pressable w-full sm:w-auto" href="/workout-plans">
-                Shop plans <ShoppingBag className="h-4 w-4" />
+                Bekijk schema&apos;s <ShoppingBag className="h-4 w-4" />
               </Link>
             </motion.div>
             <motion.div whileHover={{ y: -3, scale: 1.02 }} whileTap={{ scale: 0.97 }}>
@@ -136,7 +136,7 @@ export function HeroSection() {
             variants={fadeUp}
             transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
           >
-            {["Direct downloadbaar", "Mollie-ready", "Mobiel & desktop"].map((item) => (
+            {["Direct downloadbaar", "Mollie voorbereid", "Mobiel en desktop"].map((item) => (
               <span className="inline-flex items-center gap-2" key={item}>
                 <CheckCircle2 className="h-4 w-4 text-gold-soft" />
                 {item}
