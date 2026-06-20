@@ -5,7 +5,7 @@ import { getProductsByCategory } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "Voedingsschema's",
-  description: "Voedingsschema's voor cut, onderhoud en bulk van 1500 tot 3500 calorieën.",
+  description: "Realistische voedingsschema's voor vetverlies, onderhoud en spieropbouw van 1500 tot 3500 calorieën.",
 };
 
 export default function NutritionPlansPage() {
@@ -15,8 +15,8 @@ export default function NutritionPlansPage() {
     <>
       <PageHeader
         eyebrow="Voedingsschema's"
-        title="Macro's, maaltijden en calorieën zonder chaos."
-        text="Filter op cut, onderhoud of bulk en kies uit 1500, 2000, 2500, 3000 of 3500 calorieën."
+        title="Kies voeding die past bij jouw doel en energiebehoefte."
+        text="Start met je doel en bekijk daarna alleen de calorie-opties die daarbij logisch zijn. Geen onrealistische combinaties, maar praktische schema's met heldere macro's en maaltijden."
       />
       <section className="section-padding">
         <div className="mx-auto max-w-7xl px-6">
