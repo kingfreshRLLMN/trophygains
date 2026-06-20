@@ -15,6 +15,7 @@ export function Footer() {
           <div className="mt-4 grid gap-3 text-sm text-zinc-400">
             <Link href="/workout-plans">Trainingsschema&apos;s</Link>
             <Link href="/nutrition-plans">Voedingsschema&apos;s</Link>
+            <Link href="/doelcalculator">Doelcalculator</Link>
             <Link href="/ebooks">Ebooks</Link>
           </div>
         </div>

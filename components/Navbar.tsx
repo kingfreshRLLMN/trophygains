@@ -10,6 +10,7 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/workout-plans", label: "Trainingsschema's" },
   { href: "/nutrition-plans", label: "Voedingsschema's" },
+  { href: "/doelcalculator", label: "Doelcalculator" },
   { href: "/ebooks", label: "Ebooks" },
   { href: "/custom-coaching", label: "Coaching" },
   { href: "/about", label: "Over ons" },
@@ -35,7 +36,7 @@ export function Navbar() {
           <span className="hidden text-lg font-black tracking-wide min-[390px]:inline">Trophy Gains</span>
         </Link>
 
-        <div className="hidden items-center gap-7 lg:flex">
+        <div className="hidden items-center gap-5 lg:flex">
           {links.map((link) => (
             <Link className="pressable text-sm font-semibold text-zinc-300 transition hover:text-gold-soft" href={link.href} key={link.href}>
               {link.label}

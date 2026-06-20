@@ -176,7 +176,7 @@ export function NutritionFilters({ products }: { products: Product[] }) {
             Je caloriebehoefte verschilt per lengte, gewicht, leeftijd en activiteit. Deze schema&apos;s zijn praktische
             startpunten; persoonlijke begeleiding geeft de nauwkeurigste keuze.
           </p>
-          <Link className="text-link whitespace-nowrap" href="/custom-coaching">
+          <Link className="text-link whitespace-nowrap" href="/doelcalculator">
             Hulp bij kiezen <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
