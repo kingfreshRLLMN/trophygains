@@ -4,10 +4,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
+  Calculator,
   CheckCircle2,
   Dumbbell,
   PlayCircle,
-  ShoppingBag,
   Utensils,
   Zap,
 } from "lucide-react";
@@ -120,8 +120,8 @@ export function HeroSection() {
             transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
           >
             <motion.div whileHover={{ y: -3, scale: 1.02 }} whileTap={{ scale: 0.97 }}>
-              <Link className="btn-gold pressable w-full sm:w-auto" href="/workout-plans">
-                Bekijk schema&apos;s <ShoppingBag className="h-4 w-4" />
+              <Link className="btn-gold pressable w-full sm:w-auto" href="/doelcalculator">
+                Hulptool <Calculator className="h-4 w-4" />
               </Link>
             </motion.div>
             <motion.div whileHover={{ y: -3, scale: 1.02 }} whileTap={{ scale: 0.97 }}>
