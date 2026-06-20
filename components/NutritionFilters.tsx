@@ -18,14 +18,14 @@ const goalFilters: Array<{
   {
     value: "Cut",
     label: "Vetverlies",
-    range: "1500-2500 kcal",
+    range: "1500-2700 kcal",
     text: "Een beheerst calorietekort met voldoende eiwitten voor spierbehoud.",
     icon: Flame,
   },
   {
     value: "Maintain",
     label: "Onderhoud",
-    range: "1800-3000 kcal",
+    range: "1800-3200 kcal",
     text: "Stabiele energie en voeding om gewicht en prestaties te behouden.",
     icon: Scale,
   },

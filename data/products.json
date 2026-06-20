@@ -325,6 +325,19 @@
     "deliveryTag": "nutrition-plan"
   },
   {
+    "id": "tg-cut-2700",
+    "title": "Vetverlies Voedingsschema 2700",
+    "category": "nutrition",
+    "description": "Cut-schema voor zware of zeer actieve sporters met een hoge onderhoudsbehoefte en focus op spierbehoud en trainingsprestaties.",
+    "price": 34,
+    "badge": "Vetverlies",
+    "featured": false,
+    "goal": "Cut",
+    "calories": 2700,
+    "downloadUrl": "/downloads/cut-2700.pdf",
+    "deliveryTag": "nutrition-plan"
+  },
+  {
     "id": "tg-maintain-1800",
     "title": "Onderhoud Voedingsschema 1800",
     "category": "nutrition",
@@ -400,6 +413,19 @@
     "goal": "Maintain",
     "calories": 3000,
     "downloadUrl": "/downloads/maintain-3000.pdf",
+    "deliveryTag": "nutrition-plan"
+  },
+  {
+    "id": "tg-maintain-3200",
+    "title": "Onderhoud Voedingsschema 3200",
+    "category": "nutrition",
+    "description": "Onderhoudsplan voor zware, lange of zeer actieve sporters met veel trainingsvolume en een hoge dagelijkse energiebehoefte.",
+    "price": 34,
+    "badge": "Onderhoud",
+    "featured": false,
+    "goal": "Maintain",
+    "calories": 3200,
+    "downloadUrl": "/downloads/maintain-3200.pdf",
     "deliveryTag": "nutrition-plan"
   },
   {
