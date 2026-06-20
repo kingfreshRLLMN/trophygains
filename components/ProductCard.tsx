@@ -15,6 +15,18 @@ export function ProductCard({ product }: { product: Product }) {
     Strength: "Kracht",
   };
   const goalLabel = product.goal ? goalLabels[product.goal] : null;
+  const ebookFormatLabels = {
+    Guide: "Gids",
+    Ebook: "Ebook",
+    Checklist: "Checklist",
+    Planner: "Planner",
+  };
+  const ebookTopicLabels = {
+    Training: "Training",
+    Nutrition: "Voeding",
+    Mindset: "Mindset",
+    Recovery: "Herstel",
+  };
 
   return (
     <motion.article className="premium-card shine-card flex h-full flex-col p-5" whileHover={{ y: -8, scale: 1.01 }} transition={{ duration: 0.18 }}>
@@ -30,6 +42,8 @@ export function ProductCard({ product }: { product: Product }) {
         {product.days ? <span className="rounded-md bg-white/10 px-3 py-2">{product.days} dagen</span> : null}
         {goalLabel ? <span className="rounded-md bg-white/10 px-3 py-2">{goalLabel}</span> : null}
         {product.calories ? <span className="rounded-md bg-white/10 px-3 py-2">{product.calories} kcal</span> : null}
+        {product.ebookFormat ? <span className="rounded-md bg-white/10 px-3 py-2">{ebookFormatLabels[product.ebookFormat]}</span> : null}
+        {product.ebookTopic ? <span className="rounded-md bg-white/10 px-3 py-2">{ebookTopicLabels[product.ebookTopic]}</span> : null}
         <span className="rounded-md bg-white/10 px-3 py-2">PDF-download</span>
       </div>
       <motion.button className="btn-gold mt-6 w-full" onClick={() => addItem(product)} whileTap={{ scale: 0.96 }}>
