@@ -78,7 +78,7 @@ export function HeroSection() {
             variants={fadeUp}
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
           >
-            Premium digitale fitness
+            Trainingsschema&apos;s en coaching
           </motion.div>
 
           <motion.h1
@@ -86,7 +86,7 @@ export function HeroSection() {
             variants={fadeUp}
             transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
           >
-            Train hard. Eet slim. Win prijzen.
+            Een sterker lichaam begint met een sterker plan.
           </motion.h1>
 
           <motion.p
@@ -94,7 +94,7 @@ export function HeroSection() {
             variants={fadeUp}
             transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
           >
-            Digitale trainingsschema&apos;s, voedingsschema&apos;s, ebooks en coaching voor sporters die structuur willen zonder ruis.
+            Slim opgebouwde training, voeding en persoonlijke coaching voor sporters die gericht willen werken aan blijvend resultaat.
           </motion.p>
 
           <motion.div
