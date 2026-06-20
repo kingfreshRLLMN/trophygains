@@ -22,9 +22,10 @@ export default function GoalCalculatorPage() {
 
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             <div className="premium-card p-5">
-              <h2 className="font-black">Hoe wordt dit berekend?</h2>
+              <h2 className="font-black">Een advies op basis van jouw gegevens</h2>
               <p className="mt-3 text-sm leading-6 text-zinc-400">
-                Rustverbranding via Mifflin-St Jeor, vermenigvuldigd met je gekozen activiteitsniveau.
+                Je leeftijd, lengte, gewicht en dagelijkse activiteit worden gecombineerd tot een persoonlijk en praktisch
+                startpunt.
               </p>
             </div>
             <div className="premium-card p-5">
