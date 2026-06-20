@@ -8,7 +8,13 @@ import type { Product } from "@/lib/types";
 
 export function ProductCard({ product }: { product: Product }) {
   const { addItem } = useCart();
-  const goalLabel = product.goal === "Maintain" ? "Onderhoud" : product.goal;
+  const goalLabels = {
+    Cut: "Vetverlies",
+    Maintain: "Onderhoud",
+    Bulk: "Spieropbouw",
+    Strength: "Kracht",
+  };
+  const goalLabel = product.goal ? goalLabels[product.goal] : null;
 
   return (
     <motion.article className="premium-card shine-card flex h-full flex-col p-5" whileHover={{ y: -8, scale: 1.01 }} transition={{ duration: 0.18 }}>
@@ -27,7 +33,7 @@ export function ProductCard({ product }: { product: Product }) {
         <span className="rounded-md bg-white/10 px-3 py-2">PDF-download</span>
       </div>
       <motion.button className="btn-gold mt-6 w-full" onClick={() => addItem(product)} whileTap={{ scale: 0.96 }}>
-        Koop product <ShoppingBag className="h-4 w-4" />
+        Voeg toe aan winkelwagen <ShoppingBag className="h-4 w-4" />
       </motion.button>
     </motion.article>
   );

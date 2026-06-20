@@ -5,7 +5,7 @@ import { getProductsByCategory } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "Trainingsschema's",
-  description: "Premium TrophyGains trainingsschema's voor 2, 3, 4, 5 en 6 dagen per week.",
+  description: "Trainingsschema's voor vetverlies, onderhoud, spieropbouw en kracht, van 2 tot 6 dagen per week.",
 };
 
 export default function WorkoutPlansPage() {
@@ -15,8 +15,8 @@ export default function WorkoutPlansPage() {
     <>
       <PageHeader
         eyebrow="Trainingsschema's"
-        title="Kies het trainingsschema dat past bij jouw week."
-        text="Van compacte krachtopbouw tot een intensief physique-schema: filter op trainingsdagen en voeg je plan direct toe aan je winkelwagen."
+        title="Jouw doel. Jouw week. Jouw schema."
+        text="Kies eerst je doel en daarna hoeveel dagen je wilt trainen. Voor iedere combinatie staat een gericht trainingsschema klaar."
       />
       <section className="section-padding">
         <div className="mx-auto max-w-7xl px-6">
