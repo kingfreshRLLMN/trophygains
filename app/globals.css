@@ -258,3 +258,18 @@ body {
 .field::placeholder {
   color: rgb(161 161 170);
 }
+
+select.field {
+  color-scheme: dark;
+  cursor: pointer;
+}
+
+select.field option {
+  background: #111113;
+  color: #ffffff;
+}
+
+select.field option:checked {
+  background: #8f6d24;
+  color: #ffffff;
+}
